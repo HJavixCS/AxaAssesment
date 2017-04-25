@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterExternalServices\IDataRetriever.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\DataModel.cs" />
     <Compile Include="Entities\DomainModel.cs" />

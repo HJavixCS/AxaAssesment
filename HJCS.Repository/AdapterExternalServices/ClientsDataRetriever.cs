@@ -1,12 +1,22 @@
-﻿using HJCS.Infrastructure.DataEntities;
+﻿using System;
+using HJCS.Domain.AdapterExternalServices;
+using HJCS.Infrastructure.DataEntities;
+using Newtonsoft.Json;
 
 namespace HJCS.Infrastructure.AdapterExternalServices
 {
-    public class ClientsDataRetriever : DataRetriever<RootClientDto>
+    public class ClientsDataRetriever : DataRetriever, IDataRetriever<RootClientDto>
     {
-        internal override string SourceUrl
+        //internal override string SourceUrl
+        //{
+        //    get { return Properties.Settings.Default["ClientsSourceUrl"].ToString(); }
+        //}
+
+        private string SourceUrl => Properties.Settings.Default["ClientsSourceUrl"].ToString();
+
+        public RootClientDto Retrieve()
         {
-            get { return Properties.Settings.Default["ClientsSourceUrl"].ToString(); }
+            return JsonConvert.DeserializeObject<RootClientDto>(GetStringAsync(SourceUrl));
         }
     }
 }

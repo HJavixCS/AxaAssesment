@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using HJCS.Domain.AdapterExternalServices;
 using HJCS.Domain.Entities;
 using HJCS.Domain.Repositories;
 using HJCS.Infrastructure.AdapterExternalServices;
@@ -10,10 +11,10 @@ namespace HJCS.Infrastructure.Repositories
     public class PolicyRepository : IReadOnlyRepository<Policy>
     {
         private readonly IDataMapper<Policy, PolicyDto> _mapper;
-        private readonly DataRetriever<RootPolicyDto> _dataRetriever;
+        private readonly IDataRetriever<RootPolicyDto> _dataRetriever;
         private IList<Policy> _list;
 
-        public PolicyRepository(IDataMapper<Policy, PolicyDto> mapper, DataRetriever<RootPolicyDto> dataRetriever)
+        public PolicyRepository(IDataMapper<Policy, PolicyDto> mapper, IDataRetriever<RootPolicyDto> dataRetriever)
         {
             _mapper = mapper;
             _dataRetriever = dataRetriever;

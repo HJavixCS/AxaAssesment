@@ -1,19 +1,10 @@
 ﻿using System.Net.Http;
-using HJCS.Domain.Entities;
-using Newtonsoft.Json;
 
 namespace HJCS.Infrastructure.AdapterExternalServices
 {
-    public abstract class DataRetriever<TDataModel> where TDataModel : DataModel
+    public class DataRetriever
     {
-        internal abstract string SourceUrl { get; }
-
-        public TDataModel Retrieve()
-        {
-            return JsonConvert.DeserializeObject<TDataModel>(GetStringAsync(SourceUrl));
-        }
-
-        private static string GetStringAsync(string url)
+        internal static string GetStringAsync(string url)
         {
             var responseString = string.Empty;
             using (var httpClient = new HttpClient())

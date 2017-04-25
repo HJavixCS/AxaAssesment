@@ -1,5 +1,7 @@
-﻿using HJCS.Infrastructure;
+﻿using HJCS.Domain.AdapterExternalServices;
+using HJCS.Infrastructure;
 using HJCS.Infrastructure.AdapterExternalServices;
+using HJCS.Infrastructure.DataEntities;
 using HJCS.Infrastructure.Repositories;
 
 

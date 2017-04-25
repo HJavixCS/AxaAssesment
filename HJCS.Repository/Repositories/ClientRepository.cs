@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using HJCS.Domain.AdapterExternalServices;
 using HJCS.Domain.Entities;
 using HJCS.Domain.Repositories;
 using HJCS.Infrastructure.AdapterExternalServices;
@@ -10,10 +11,10 @@ namespace HJCS.Infrastructure.Repositories
     public class ClientRepository : IReadOnlyRepository<Client>
     {
         private readonly IDataMapper<Client, ClientDto> _mapper;
-        private readonly DataRetriever<RootClientDto> _dataRetriever;
+        private readonly IDataRetriever<RootClientDto> _dataRetriever;
         private IList<Client> _list;
 
-        public ClientRepository(IDataMapper<Client, ClientDto> mapper, DataRetriever<RootClientDto> dataRetriever)
+        public ClientRepository(IDataMapper<Client, ClientDto> mapper, IDataRetriever<RootClientDto> dataRetriever)
         {
             _mapper = mapper;
             _dataRetriever = dataRetriever;

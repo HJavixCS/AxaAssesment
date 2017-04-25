@@ -1,12 +1,16 @@
-﻿using HJCS.Infrastructure.DataEntities;
+﻿using HJCS.Domain.AdapterExternalServices;
+using HJCS.Infrastructure.DataEntities;
+using Newtonsoft.Json;
 
 namespace HJCS.Infrastructure.AdapterExternalServices
 {
-    public class PoliciesDataRetriever : DataRetriever<RootPolicyDto>
+    public class PoliciesDataRetriever : DataRetriever, IDataRetriever<RootPolicyDto>
     {
-        internal override string SourceUrl
+        private string SourceUrl => Properties.Settings.Default["PoliciesSourceUrl"].ToString();
+
+        public RootPolicyDto Retrieve()
         {
-            get { return Properties.Settings.Default["PoliciesSourceUrl"].ToString(); }
+            return JsonConvert.DeserializeObject<RootPolicyDto>(GetStringAsync(SourceUrl));
         }
     }
 }
