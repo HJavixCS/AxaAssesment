@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HJCS.Infrastructure
+namespace HJCS.Domain.Entities
 {
     public class Policy : DomainModel
     {

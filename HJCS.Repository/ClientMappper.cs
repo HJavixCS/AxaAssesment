@@ -1,4 +1,6 @@
-﻿
+﻿using HJCS.Domain.Entities;
+using HJCS.Domain.Repositories;
+
 namespace HJCS.Infrastructure
 {
     public class ClientMappper : IDataMapper<Client, ClientDto>

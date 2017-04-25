@@ -1,9 +1,10 @@
 ﻿using System.Net.Http;
+using HJCS.Domain.Entities;
 using Newtonsoft.Json;
 
-namespace HJCS.Infrastructure
+namespace HJCS.Domain.Repositories
 {
-    public abstract class IRetriever<TDataModel> where TDataModel : DataModel
+    public abstract class DataRetriever<TDataModel> where TDataModel : DataModel
     {
         internal abstract string SourceUrl { get; }
 

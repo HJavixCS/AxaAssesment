@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using HJCS.Domain.Entities;
 
 namespace HJCS.Infrastructure
 {

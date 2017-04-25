@@ -1,4 +1,4 @@
-﻿namespace HJCS.Infrastructure
+﻿namespace HJCS.Domain.Entities
 {
     public abstract class DataModel
     {

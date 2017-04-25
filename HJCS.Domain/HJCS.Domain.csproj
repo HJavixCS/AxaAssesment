@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2C6A2DBE-4762-4C14-AE4C-8746A1CD2C24}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{6B9AA036-0DF5-486E-8F6D-49FC9208536E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleTests</RootNamespace>
-    <AssemblyName>ConsoleTests</AssemblyName>
+    <RootNamespace>HJCS.Domain</RootNamespace>
+    <AssemblyName>HJCS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\DataModel.cs" />
+    <Compile Include="Entities\DomainModel.cs" />
+    <Compile Include="Entities\Policy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IDataMapper.cs" />
+    <Compile Include="Repositories\IReadOnlyRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HJCS.Domain\HJCS.Domain.csproj">
-      <Project>{6b9aa036-0df5-486e-8f6d-49fc9208536e}</Project>
-      <Name>HJCS.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HJCS.Repository\HJCS.Infrastructure.csproj">
-      <Project>{0ae96acd-d7f4-4b51-a41b-d33e991226cc}</Project>
-      <Name>HJCS.Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

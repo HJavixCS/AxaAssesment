@@ -1,20 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using Newtonsoft.Json;
+using HJCS.Domain.Entities;
+using HJCS.Domain.Repositories;
 
 namespace HJCS.Infrastructure
 {
     public class ClientRepository : IReadOnlyRepository<Client>
     {
         private readonly IDataMapper<Client, ClientDto> _mapper;
-        private readonly IRetriever<RootClientDto> _retriever;
+        private readonly DataRetriever<RootClientDto> _dataRetriever;
         private IList<Client> _list;
 
-        public ClientRepository(IDataMapper<Client, ClientDto> mapper, IRetriever<RootClientDto> retriever)
+        public ClientRepository(IDataMapper<Client, ClientDto> mapper, DataRetriever<RootClientDto> dataRetriever)
         {
             _mapper = mapper;
-            _retriever = retriever;
+            _dataRetriever = dataRetriever;
         }
 
         public IList<Client> List
@@ -36,7 +36,7 @@ namespace HJCS.Infrastructure
 
         private IEnumerable<Client> GetRemoteClients()
         {
-            var clients = _retriever.Retrieve();
+            var clients = _dataRetriever.Retrieve();
             return clients.clients.Select(r => _mapper.Map(r));
         }
     }

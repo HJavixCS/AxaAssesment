@@ -1,8 +1,9 @@
 ﻿using System.Configuration;
+using HJCS.Domain.Repositories;
 
 namespace HJCS.Infrastructure
 {
-    public class ClientsRetriever : IRetriever<RootClientDto>
+    public class ClientsDataRetriever : DataRetriever<RootClientDto>
     {
         internal override string SourceUrl
         {
