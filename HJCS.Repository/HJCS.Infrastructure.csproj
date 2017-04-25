@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterExternalServices\PoliciesDataRetriever.cs" />
     <Compile Include="DataEntities\ClientDto.cs" />
+    <Compile Include="DataEntities\PolicyDto.cs" />
     <Compile Include="Repositories\ClientMappper.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
     <Compile Include="AdapterExternalServices\ClientsDataRetriever.cs" />
@@ -56,6 +58,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\PolicyMapper.cs" />
+    <Compile Include="Repositories\PolicyRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

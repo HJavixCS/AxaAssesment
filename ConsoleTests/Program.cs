@@ -11,9 +11,20 @@ namespace ConsoleTests
         {
             var clientMapper = new ClientMappper();//TODO: Inject
             var clientRetriever = new ClientsDataRetriever();//TODO: Inject
-            var repo = new ClientRepository(clientMapper, clientRetriever);
-            var list = repo.List;
-            var client = repo.GetById("0178914c-548b-4a4c-b918-47d6a391530c");
+
+            var clientRepository = new ClientRepository(clientMapper, clientRetriever);
+
+
+            var policyMapper = new PolicyMapper(clientRepository);
+            var policyRetriever = new PoliciesDataRetriever();//TODO: Inject
+            var policyRepository = new PolicyRepository(policyMapper, policyRetriever);
+
+            var clientsList = clientRepository.List;
+            var client = clientRepository.GetById("0178914c-548b-4a4c-b918-47d6a391530c");
+
+
+            var policiesList = policyRepository.List;
+            var policy = policyRepository.GetById("7b624ed3-00d5-4c1b-9ab8-c265067ef58b");
         }
     }
 }

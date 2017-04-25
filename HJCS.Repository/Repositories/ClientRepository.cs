@@ -38,8 +38,8 @@ namespace HJCS.Infrastructure.Repositories
 
         private IEnumerable<Client> GetRemoteClients()
         {
-            var clients = _dataRetriever.Retrieve();
-            return clients.clients.Select(r => _mapper.Map(r));
+            var context = _dataRetriever.Retrieve();
+            return context.clients.Select(r => _mapper.Map(r));
         }
     }
 }

@@ -26,9 +26,9 @@ namespace HJCS.Infrastructure.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://www.mocky.io/v2/5808862710000087232b75ac")]
-        public string ClientSourceUrl {
+        public string ClientsSourceUrl {
             get {
-                return ((string)(this["ClientSourceUrl"]));
+                return ((string)(this["ClientsSourceUrl"]));
             }
         }
         

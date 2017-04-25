@@ -2,11 +2,11 @@
 
 namespace HJCS.Infrastructure.AdapterExternalServices
 {
-    public class ClientsDataRetriever : DataRetriever<RootClientDto>
+    public class PoliciesDataRetriever : DataRetriever<RootPolicyDto>
     {
         internal override string SourceUrl
         {
-            get { return Properties.Settings.Default["ClientsSourceUrl"].ToString(); }
+            get { return Properties.Settings.Default["PoliciesSourceUrl"].ToString(); }
         }
     }
 }
