@@ -2,7 +2,7 @@
 using HJCS.Domain.Entities;
 using Newtonsoft.Json;
 
-namespace HJCS.Domain.Repositories
+namespace HJCS.Infrastructure.AdapterExternalServices
 {
     public abstract class DataRetriever<TDataModel> where TDataModel : DataModel
     {

@@ -1,4 +1,6 @@
 ﻿using HJCS.Infrastructure;
+using HJCS.Infrastructure.AdapterExternalServices;
+using HJCS.Infrastructure.Repositories;
 
 
 namespace ConsoleTests

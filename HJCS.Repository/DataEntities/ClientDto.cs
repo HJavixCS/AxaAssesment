@@ -1,8 +1,7 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HJCS.Domain.Entities;
 
-namespace HJCS.Infrastructure
+namespace HJCS.Infrastructure.DataEntities
 {
     public class ClientDto : DataModel
     {

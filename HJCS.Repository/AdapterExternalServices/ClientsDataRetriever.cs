@@ -1,7 +1,6 @@
-﻿using System.Configuration;
-using HJCS.Domain.Repositories;
+﻿using HJCS.Infrastructure.DataEntities;
 
-namespace HJCS.Infrastructure
+namespace HJCS.Infrastructure.AdapterExternalServices
 {
     public class ClientsDataRetriever : DataRetriever<RootClientDto>
     {

@@ -2,8 +2,10 @@
 using System.Linq;
 using HJCS.Domain.Entities;
 using HJCS.Domain.Repositories;
+using HJCS.Infrastructure.AdapterExternalServices;
+using HJCS.Infrastructure.DataEntities;
 
-namespace HJCS.Infrastructure
+namespace HJCS.Infrastructure.Repositories
 {
     public class ClientRepository : IReadOnlyRepository<Client>
     {
