@@ -1,4 +1,4 @@
-﻿namespace HJCS.Repository
+﻿namespace HJCS.Infrastructure
 {
     public interface IDataMapper<TDomainModel, TDataModel> where TDomainModel : DomainModel where TDataModel : DataModel
     {

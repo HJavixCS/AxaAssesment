@@ -1,5 +1,5 @@
 ﻿
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public class ClientMappper : IDataMapper<Client, ClientDto>
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HJCS.Repository", "HJCS.Repository\HJCS.Repository.csproj", "{0AE96ACD-D7F4-4B51-A41B-D33E991226CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HJCS.Infrastructure", "HJCS.Repository\HJCS.Infrastructure.csproj", "{0AE96ACD-D7F4-4B51-A41B-D33E991226CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "ConsoleTests\ConsoleTests.csproj", "{2C6A2DBE-4762-4C14-AE4C-8746A1CD2C24}"
 EndProject

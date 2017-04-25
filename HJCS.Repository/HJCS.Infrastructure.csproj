@@ -7,8 +7,8 @@
     <ProjectGuid>{0AE96ACD-D7F4-4B51-A41B-D33E991226CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HJCS.Repository</RootNamespace>
-    <AssemblyName>HJCS.Repository</AssemblyName>
+    <RootNamespace>HJCS.Infrastructure</RootNamespace>
+    <AssemblyName>HJCS.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

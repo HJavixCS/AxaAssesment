@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public class ClientsRetriever : IRetriever<RootClientDto>
     {

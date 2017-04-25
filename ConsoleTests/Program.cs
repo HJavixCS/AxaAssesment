@@ -1,4 +1,4 @@
-﻿using HJCS.Repository;
+﻿using HJCS.Infrastructure;
 
 namespace ConsoleTests
 {

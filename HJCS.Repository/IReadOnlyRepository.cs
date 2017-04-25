@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public interface IReadOnlyRepository<TDomainModel> where TDomainModel: DomainModel
     {

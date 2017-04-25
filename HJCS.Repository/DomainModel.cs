@@ -1,4 +1,4 @@
-﻿namespace HJCS.Repository
+﻿namespace HJCS.Infrastructure
 {
     public abstract class DomainModel
     {

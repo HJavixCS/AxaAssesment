@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public class ClientDto : DataModel
     {

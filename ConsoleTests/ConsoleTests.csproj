@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HJCS.Repository\HJCS.Repository.csproj">
+    <ProjectReference Include="..\HJCS.Repository\HJCS.Infrastructure.csproj">
       <Project>{0ae96acd-d7f4-4b51-a41b-d33e991226cc}</Project>
-      <Name>HJCS.Repository</Name>
+      <Name>HJCS.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

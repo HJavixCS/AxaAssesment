@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
 
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public class ClientRepository : IReadOnlyRepository<Client>
     {

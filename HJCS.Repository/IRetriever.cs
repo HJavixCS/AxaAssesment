@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using Newtonsoft.Json;
 
-namespace HJCS.Repository
+namespace HJCS.Infrastructure
 {
     public abstract class IRetriever<TDataModel> where TDataModel : DataModel
     {
