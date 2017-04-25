@@ -7,11 +7,6 @@ namespace HJCS.Infrastructure.AdapterExternalServices
 {
     public class ClientsDataRetriever : DataRetriever, IDataRetriever<RootClientDto>
     {
-        //internal override string SourceUrl
-        //{
-        //    get { return Properties.Settings.Default["ClientsSourceUrl"].ToString(); }
-        //}
-
         private string SourceUrl => Properties.Settings.Default["ClientsSourceUrl"].ToString();
 
         public RootClientDto Retrieve()

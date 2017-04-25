@@ -3,7 +3,7 @@ using HJCS.Domain.Entities;
 
 namespace HJCS.Infrastructure.DataEntities
 {
-    public class PolicyDto
+    public class PolicyDto : DataModel
     {
         public string id { get; set; }
         public double amountInsured { get; set; }

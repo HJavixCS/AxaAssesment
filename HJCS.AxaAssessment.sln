@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "ConsoleTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HJCS.Domain", "HJCS.Domain\HJCS.Domain.csproj", "{6B9AA036-0DF5-486E-8F6D-49FC9208536E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HJCS.WebApi", "HJCS.WebApi\HJCS.WebApi.csproj", "{55317EF7-E2FE-441F-9B02-E4F884ED4690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6B9AA036-0DF5-486E-8F6D-49FC9208536E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B9AA036-0DF5-486E-8F6D-49FC9208536E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B9AA036-0DF5-486E-8F6D-49FC9208536E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55317EF7-E2FE-441F-9B02-E4F884ED4690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55317EF7-E2FE-441F-9B02-E4F884ED4690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55317EF7-E2FE-441F-9B02-E4F884ED4690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55317EF7-E2FE-441F-9B02-E4F884ED4690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
