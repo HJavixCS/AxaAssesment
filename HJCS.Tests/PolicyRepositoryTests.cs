@@ -63,27 +63,29 @@ namespace HJCS.Tests
         [Test]
         public void GivenPoliciesData_WhenListAll_ThenGetAll()
         {
+            var expectedItems = 3;
             var list = _repository.All.ToList();
             Assert.True(list.Any());
-            Assert.AreEqual(list.Count, 3);
+            Assert.AreEqual(expectedItems, list.Count);
         }
 
         [Test]
         [TestCase("1001", "abc@mail.net")]
         [TestCase("1003", "a1b2b3@mail.net")]
-        public void GivenPoliciesData_WhenGetById_ThenGetMatchPolicy(string id, string email)
+        public void GivenPoliciesData_WhenGetByExistentId_ThenGetMatchPolicy(string id, string expectdEmail)
         {
-            var policy = _repository.GetById(id);
-            Assert.AreEqual(policy.EMail, email);
+            var actualPolicy = _repository.GetById(id);
+            Assert.AreEqual(expectdEmail, actualPolicy.EMail);
         }
 
         [Test]
         [TestCase("999", "abc@mail.net")]
         [TestCase("acb", "a1b2b3@mail.net")]
-        public void GivenPoliciesData_WhenGetByNonExistentId_ThenGetNullPolicy(string id, string email)
+        public void GivenPoliciesData_WhenGetByNonExistentId_ThenGetNullPolicy(string id, string expectdEmail)
         {
-            var policy = _repository.GetById(id);
-            Assert.AreEqual(policy, default(Policy));
+            var expetecPolicy = default(Policy);
+            var actualPolicy = _repository.GetById(id);
+            Assert.AreEqual(expetecPolicy, actualPolicy);
         }
     }
 }
