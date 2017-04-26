@@ -133,7 +133,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthProvider\AuthorizeAttribute.cs" />
-    <Compile Include="AuthProvider\MyAuthorizationServerProvider.cs" />
+    <Compile Include="AuthProvider\CustomAuthorizationServerProvider.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

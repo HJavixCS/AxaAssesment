@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Web.Http;
+using HJCS.Domain.Entities;
+using HJCS.Domain.Repositories;
+using HJCS.Infrastructure.Repositories;
 using HJCS.WebApi;
 using HJCS.WebApi.AuthProvider;
 using Microsoft.Owin;
@@ -27,7 +30,7 @@ namespace HJCS.WebApi
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-                Provider = new MyAuthorizationServerProvider()
+                Provider = new CustomAuthorizationServerProvider()
             };
 
             app.UseOAuthAuthorizationServer(oAuthServerOptions);
