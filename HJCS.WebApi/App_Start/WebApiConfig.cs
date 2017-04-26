@@ -1,7 +1,4 @@
 ﻿using Microsoft.Practices.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 using HJCS.Domain.AdapterExternalServices;
 using HJCS.Domain.Entities;
@@ -19,11 +16,16 @@ namespace HJCS.WebApi
         {
             // Dependency Injection
             var container = new UnityContainer();
+           
             container.RegisterType<IReadOnlyRepository<Client>, ClientRepository>(new HierarchicalLifetimeManager());
 
+            container.RegisterType<IReadOnlyRepository<Policy>, PolicyRepository>(new HierarchicalLifetimeManager());
+
             container.RegisterType<IDataMapper<Client, ClientDto>, ClientMappper>();
+            container.RegisterType<IDataMapper<Policy, PolicyDto>, PolicyMapper>();
 
             container.RegisterType<IDataRetriever<RootClientDto>, ClientsDataRetriever>();
+            container.RegisterType<IDataRetriever<RootPolicyDto>, PoliciesDataRetriever>();
 
             config.DependencyResolver = new UnityResolver(container);
 

@@ -1,7 +1,4 @@
-﻿using HJCS.Domain.AdapterExternalServices;
-using HJCS.Infrastructure;
-using HJCS.Infrastructure.AdapterExternalServices;
-using HJCS.Infrastructure.DataEntities;
+﻿using HJCS.Infrastructure.AdapterExternalServices;
 using HJCS.Infrastructure.Repositories;
 
 
@@ -21,11 +18,11 @@ namespace ConsoleTests
             var policyRetriever = new PoliciesDataRetriever();//TODO: Inject
             var policyRepository = new PolicyRepository(policyMapper, policyRetriever);
 
-            var clientsList = clientRepository.List;
+            var clientsList = clientRepository.All;
             var client = clientRepository.GetById("0178914c-548b-4a4c-b918-47d6a391530c");
 
 
-            var policiesList = policyRepository.List;
+            var policiesList = policyRepository.All;
             var policy = policyRepository.GetById("7b624ed3-00d5-4c1b-9ab8-c265067ef58b");
         }
     }

@@ -8,10 +8,12 @@ namespace HJCS.WebApi.Controllers
     public class ClientsController : ApiController
     {
         private readonly IReadOnlyRepository<Client> _clientRepository;
+        private readonly IReadOnlyRepository<Policy> _policyRepository;
 
-        public ClientsController(IReadOnlyRepository<Client> clientRepository)
+        public ClientsController(IReadOnlyRepository<Client> clientRepository, IReadOnlyRepository<Policy> policyRepository)
         {
             _clientRepository = clientRepository;
+            _policyRepository = policyRepository;
         }
 
         public IHttpActionResult GetClient(string id)
@@ -27,7 +29,7 @@ namespace HJCS.WebApi.Controllers
         [Route("api/client/name/{name}")]
         public IHttpActionResult GetClientByName(string name)
         {
-            var client = _clientRepository.List.FirstOrDefault(t => t.Name.ToLower() == name.ToLower());
+            var client = _clientRepository.All.FirstOrDefault(t => t.Name.ToLower() == name.ToLower());
             if (client == default(Client))
             {
                 return NotFound();
@@ -39,14 +41,24 @@ namespace HJCS.WebApi.Controllers
         [HttpGet]
         public IHttpActionResult FindPoliciesByClientName(string name)
         {
-            return Ok("FindPoliciesByClientName");
+            var policies = _policyRepository.All.Where(t => t.Client.Name == name).ToList();
+            if (!policies.Any())
+            {
+                return NotFound();
+            }
+            return Ok(policies);
         }
 
-        [Route("api/policy/{id}/client")]
+        [Route("api/policy/{policyId}/client")]
         [HttpGet]
-        public IHttpActionResult FindClientByPolicy(string id)
+        public IHttpActionResult FindClientByPolicy(string policyId)
         {
-            return Ok("FindClientByPolicy");
+            var policy = _policyRepository.GetById(policyId);
+            if (policy == default(Policy))
+            {
+                return NotFound();
+            }
+            return Ok(policy.Client);
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Linq;
 using HJCS.Domain.AdapterExternalServices;
 using HJCS.Domain.Entities;
 using HJCS.Domain.Repositories;
-using HJCS.Infrastructure.AdapterExternalServices;
 using HJCS.Infrastructure.DataEntities;
 
 namespace HJCS.Infrastructure.Repositories
@@ -12,7 +11,7 @@ namespace HJCS.Infrastructure.Repositories
     {
         private readonly IDataMapper<Client, ClientDto> _mapper;
         private readonly IDataRetriever<RootClientDto> _dataRetriever;
-        private IList<Client> _list;
+        private IEnumerable<Client> _list;
 
         public ClientRepository(IDataMapper<Client, ClientDto> mapper, IDataRetriever<RootClientDto> dataRetriever)
         {
@@ -20,13 +19,13 @@ namespace HJCS.Infrastructure.Repositories
             _dataRetriever = dataRetriever;
         }
 
-        public IList<Client> List
+        public IEnumerable<Client> All
         {
             get
             {
                 if (_list == default(IEnumerable<Client>))
                 {
-                    _list = GetRemoteClients().ToList();
+                    _list = GetRemoteClients();
                 }
                 return _list;
             }
@@ -34,7 +33,7 @@ namespace HJCS.Infrastructure.Repositories
 
         public Client GetById(string id)
         {
-            return List.FirstOrDefault(r => r.Id == id);
+            return All.FirstOrDefault(r => r.Id == id);
         }
 
         private IEnumerable<Client> GetRemoteClients()

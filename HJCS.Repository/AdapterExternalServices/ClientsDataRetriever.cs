@@ -1,5 +1,4 @@
-﻿using System;
-using HJCS.Domain.AdapterExternalServices;
+﻿using HJCS.Domain.AdapterExternalServices;
 using HJCS.Infrastructure.DataEntities;
 using Newtonsoft.Json;
 

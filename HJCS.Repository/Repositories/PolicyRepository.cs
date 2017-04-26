@@ -3,7 +3,6 @@ using System.Linq;
 using HJCS.Domain.AdapterExternalServices;
 using HJCS.Domain.Entities;
 using HJCS.Domain.Repositories;
-using HJCS.Infrastructure.AdapterExternalServices;
 using HJCS.Infrastructure.DataEntities;
 
 namespace HJCS.Infrastructure.Repositories
@@ -12,7 +11,7 @@ namespace HJCS.Infrastructure.Repositories
     {
         private readonly IDataMapper<Policy, PolicyDto> _mapper;
         private readonly IDataRetriever<RootPolicyDto> _dataRetriever;
-        private IList<Policy> _list;
+        private IEnumerable<Policy> _list;
 
         public PolicyRepository(IDataMapper<Policy, PolicyDto> mapper, IDataRetriever<RootPolicyDto> dataRetriever)
         {
@@ -20,13 +19,13 @@ namespace HJCS.Infrastructure.Repositories
             _dataRetriever = dataRetriever;
         }
 
-        public IList<Policy> List
+        public IEnumerable<Policy> All
         {
             get
             {
                 if (_list == default(IEnumerable<Policy>))
                 {
-                    _list = GetRemotePolicys().ToList();
+                    _list = GetRemotePolicys();
                 }
                 return _list;
             }
@@ -34,7 +33,7 @@ namespace HJCS.Infrastructure.Repositories
 
         public Policy GetById(string id)
         {
-            return List.FirstOrDefault(r => r.Id == id);
+            return All.FirstOrDefault(r => r.Id == id);
         }
 
         private IEnumerable<Policy> GetRemotePolicys()

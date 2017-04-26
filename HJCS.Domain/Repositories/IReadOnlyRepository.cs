@@ -5,7 +5,7 @@ namespace HJCS.Domain.Repositories
 {
     public interface IReadOnlyRepository<TDomainModel> where TDomainModel: DomainModel
     {
-        IList<TDomainModel> List { get; }
+        IEnumerable<TDomainModel> All { get; }
         TDomainModel GetById(string id);
     }
 }
