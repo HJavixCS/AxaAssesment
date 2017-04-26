@@ -5,6 +5,7 @@ using HJCS.Domain.Repositories;
 
 namespace HJCS.WebApi.Controllers
 {
+    [Authorize]
     public class ClientsController : ApiController
     {
         private readonly IReadOnlyRepository<Client> _clientRepository;
@@ -16,6 +17,7 @@ namespace HJCS.WebApi.Controllers
             _policyRepository = policyRepository;
         }
 
+        [Authorize(Roles = "user,admin")]
         public IHttpActionResult GetClient(string id)
         {
             var client = _clientRepository.GetById(id);
@@ -26,7 +28,8 @@ namespace HJCS.WebApi.Controllers
             return Ok(client);
         }
 
-        [Route("api/client/name/{name}")]
+        [Authorize(Roles = "user,admin")]
+        [Route("api/clients/name/{name}")]
         public IHttpActionResult GetClientByName(string name)
         {
             var client = _clientRepository.All.FirstOrDefault(t => t.Name.ToLower() == name.ToLower());
@@ -37,7 +40,8 @@ namespace HJCS.WebApi.Controllers
             return Ok(client);
         }
 
-        [Route("api/client/name/{name}/policies")]
+        [Authorize(Roles = "admin")]
+        [Route("api/clients/name/{name}/policies")]
         [HttpGet]
         public IHttpActionResult FindPoliciesByClientName(string name)
         {
@@ -49,7 +53,8 @@ namespace HJCS.WebApi.Controllers
             return Ok(policies);
         }
 
-        [Route("api/policy/{policyId}/client")]
+        [Authorize(Roles = "admin")]
+        [Route("api/policies/{policyId}/client")]
         [HttpGet]
         public IHttpActionResult FindClientByPolicy(string policyId)
         {
