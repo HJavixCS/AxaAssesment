@@ -1,6 +1,6 @@
 # README #
 
-Axa Assesment (Back-end) by Héctor Javier Castillo Suazo.
+Axa Assesment (Back-end) by Héctor Javier Castillo Suazo (@HJavixCS).
 
 ### What is this repository for? ###
 
