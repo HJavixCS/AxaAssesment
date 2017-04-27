@@ -9,15 +9,18 @@ Axa Assesment (Backend) por Héctor Javier Castillo Suazo.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Clonar el repositorio (o descargar el código fuente)
+* Restaurar Nuget Packages en toda la solución
+* No hay uso de bases de datos
+* Ejecutar Test Unitarios (HJCS.Tests)
+* Asegurarse se poner como Startup Project el proyecto de la API REST (HJCS.WebApi)
+* Ejecutar la solución desde Visual Studio
+* Usar Postman (https://www.getpostman.com/) para probar la Web API 
 
-http://hjcsaxawebapi.azurewebsites.net/
-https://www.getpostman.com/
+Probando la Web API con Postman:
+(En construcción)
+Nota: La Web API también está publicada en Microsoft Azure (http://hjcsaxawebapi.azurewebsites.net/)
+
 
 ### Who do I talk to? ###
 
