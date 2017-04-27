@@ -23,22 +23,22 @@ Axa Assesment (Back-end) by Héctor Javier Castillo Suazo (https://twitter.com/h
 
 Get user data filtered by user id -> Can be accessed by users with role "users" and "admin":
 
-api/clients/**{id}**
+* api/clients/**{id}**
 
 
 Get user data filterd by user name -> Can be accessed by users with role "users" and "admin"
 
-api/clients/name/**{name}**
+* api/clients/name/**{name}**
 
 
 Get the list of policies linked to a user name -> Can be accessed by users with role "admin"
 
-api/clients/name/**{name}**/policies
+* api/clients/name/**{name}**/policies
 
 
 Get the user linked to a policy number -> Can be accessed by users with role "admin"
 
-api/policies/**{policyId}**/client
+* api/policies/**{policyId}**/client
 
 
 (Under construction)
