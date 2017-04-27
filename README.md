@@ -36,5 +36,4 @@ api/clients/name/**{name}**/policies
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* javier.castillosuazo@gmail.com
+* Repo owner: javier.castillosuazo@gmail.com
