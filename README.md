@@ -40,11 +40,14 @@ Get the user linked to a policy number -> Can be accessed by users with role "ad
 
 * api/policies/**{policyId}**/client
 
+
 **Get Authentication Token:**
 (Under construction)
 
+
 **Test with Postman:**
 (Under construction)
+
 
 *Note*: The Web API is also published at Microsoft Azure Cloud (http://hjcsaxawebapi.azurewebsites.net/)
 
