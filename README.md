@@ -17,10 +17,20 @@ Axa Assesment (Backend) por Héctor Javier Castillo Suazo.
 * Ejecutar la solución desde Visual Studio
 * Usar Postman (https://www.getpostman.com/) para probar la Web API 
 
-Probando la Web API con Postman:
+### Probando la Web API con Postman ###
+**API Constraints:**
+api/clients/**{id}**
+
+api/clients/name/**{name}**
+
+api/policies/**{policyId}**/client
+
+api/clients/name/**{name}**/policies
+
+
 (En construcción)
 
-Nota: La Web API también está publicada en Microsoft Azure (http://hjcsaxawebapi.azurewebsites.net/)
+*Nota*: La Web API también está publicada en Microsoft Azure (http://hjcsaxawebapi.azurewebsites.net/)
 
 
 ### Who do I talk to? ###
