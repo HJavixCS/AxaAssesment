@@ -1,23 +1,24 @@
 # README #
 
-Axa Assesment (Backend) por Héctor Javier Castillo Suazo.
+Axa Assesment (Back-end) by Héctor Javier Castillo Suazo.
 
 ### What is this repository for? ###
 
-* Solución Visual Studio 2015 (Web API)
+* Visual Studio 2015 Solution (Web API 2). DDD Approach (Repositories, Mappers, Domain Entities, etc).
+* Unit Testing (NUnit framework, NSubstitute)
 * 1.0
 
 ### How do I get set up? ###
 
-* Clonar el repositorio (o descargar el código fuente)
-* Restaurar Nuget Packages en toda la solución
-* No hay uso de bases de datos
-* Ejecutar Test Unitarios (HJCS.Tests)
-* Asegurarse se poner como Startup Project el proyecto de la API REST (HJCS.WebApi)
-* Ejecutar la solución desde Visual Studio
-* Usar Postman (https://www.getpostman.com/) para probar la Web API 
+* Clone repository (or download source code)
+* Respore Nuget Packages for the solution
+* There is not database configuration
+* Run Unit Tests (HJCS.Tests)
+* Check if Web API project is set as Startup Project(HJCS.WebApi)
+* Run the solution into Visual Studio
+* Use Postman tool (https://www.getpostman.com/) to test the Web API (Or use Fiddler instead)
 
-### Probando la Web API con Postman ###
+### Testing the Web API with Postman ###
 **API Constraints:**
 
 Get user data filtered by user id -> Can be accessed by users with role "users" and "admin":
@@ -40,9 +41,9 @@ Get the user linked to a policy number -> Can be accessed by users with role "ad
 api/policies/**{policyId}**/client
 
 
-(En construcción)
+(Under construction)
 
-*Nota*: La Web API también está publicada en Microsoft Azure (http://hjcsaxawebapi.azurewebsites.net/)
+*Note*: The Web API is also published at Microsoft Azure Cloud (http://hjcsaxawebapi.azurewebsites.net/)
 
 
 ### Who do I talk to? ###
