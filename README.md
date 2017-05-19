@@ -10,13 +10,10 @@ As a insurance company we've been asked to develop an application that manage so
 * The list of company clients can be found at: http://www.mocky.io/v2/5808862710000087232b75ac
 * The list of company policies can be found at: http://www.mocky.io/v2/580891a4100000e8242b75c5
 
-With that information, we need to create a Web API that exposes services
+**With that information, we need to create a Web API that exposes services with some constraints:**
 
-with some constraints:
 * Get user data filtered by user id -> Can be accessed by users with role "users" and "admin"
-* Get user data filterd by user name -> Can be accessed by users with role
-
-"users" and "admin"
+* Get user data filterd by user name -> Can be accessed by users with role "users" and "admin"
 * Get the list of policies linked to a user name -> Can be accessed by users with role "admin"
 * Get the user linked to a policy number -> Can be accessed by users with role "admin"
 
